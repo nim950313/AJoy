@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:background="@drawable/start"
+    android:scaleType="centerCrop"    >
+
+    <LinearLayout
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+    <Button
+        android:id="@+id/button_start_game"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_gravity="bottom|left|fill_horizontal"
+        android:onClick="onClick"
+        android:background="#00000000"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:text="시  작" />
+
+    <Button
+        android:id="@+id/button_exit_app"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_gravity="bottom|right|fill_horizontal"
+        android:onClick="onClick"
+        android:background="#00000000"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:text="종  료" />
+    </LinearLayout>
+
+</LinearLayout>
+
