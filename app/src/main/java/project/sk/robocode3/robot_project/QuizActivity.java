@@ -7,6 +7,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -22,6 +23,7 @@ import kr.robomation.physical.UoAlbert;
 
 import static project.sk.robocode3.robot_project.CommonObject.capital_button;
 import static project.sk.robocode3.robot_project.CommonObject.nation_capital;
+import static project.sk.robocode3.robot_project.CommonObject.nation_flag;
 import static project.sk.robocode3.robot_project.CommonObject.nation_name;
 import static project.sk.robocode3.robot_project.CommonObject.robot;
 
@@ -36,6 +38,7 @@ public class QuizActivity extends RobotActivity implements View.OnClickListener 
     private View popupView_correct;
     private TextView textview_content;
     private Button button_go_home;
+    private ImageView answer_flag;
 
     public int red=0,green=0,blue=0;
 
@@ -65,6 +68,8 @@ public class QuizActivity extends RobotActivity implements View.OnClickListener 
         textview_content = (TextView) popupView_correct.findViewById(R.id.textview_content);
         textview_content.setText("정답입니다! "+nation_name[index]+"의 수도는 "+nation_capital[index]+"입니다!");
         button_go_home = (Button)popupView_correct.findViewById(R.id.button_go_home);
+        answer_flag = (ImageView)findViewById(R.id.img_answerflag);
+
 
 
         Random r = new Random();
@@ -81,10 +86,12 @@ public class QuizActivity extends RobotActivity implements View.OnClickListener 
         if(answer == 1){
             button_answer1.setBackgroundResource(capital_button[index]);
             button_answer2.setBackgroundResource(capital_button[another_answer]);
+
         }else{
             button_answer2.setBackgroundResource(capital_button[index]);
             button_answer1.setBackgroundResource(capital_button[another_answer]);
         }
+        //answer_flag.setImageResource(capital_button[index]);
 
     }
 

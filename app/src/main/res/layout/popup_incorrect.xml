@@ -6,17 +6,10 @@
     android:layout_height="match_parent"
     android:gravity="center">
 
-    <RelativeLayout
+    <ImageView
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"
         android:background="@drawable/answerwrong"
-        android:layout_height="wrap_content">
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:text="다시 생각해보세요!"
-        android:gravity="center"/>
-
-
-    </RelativeLayout>
+        />
 </LinearLayout>
