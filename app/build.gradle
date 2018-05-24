@@ -26,11 +26,9 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     }
-
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     }
-
     compile project(path: ':uoalbert')
     compile project(':uoalbert')
     implementation files('libs/org.smartrobot.android.ble-1.0.2.jar')

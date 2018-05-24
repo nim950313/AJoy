@@ -1,6 +1,6 @@
 /*
  * This file is auto-generated.  DO NOT MODIFY.
- * Original file: /Users/woobin/GitHub/robotcode/uoalbert/src/main/aidl/org/roboid/android/ipc/ClientInterface.aidl
+ * Original file: C:\\Users\\Public\\github\\AJoy\\uoalbert\\src\\main\\aidl\\org\\roboid\\android\\ipc\\ClientInterface.aidl
  */
 package org.roboid.android.ipc;
 /**
