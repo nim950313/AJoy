@@ -12,7 +12,7 @@
         android:orientation="vertical">
 
     <TextView
-        android:id="@+id/Textview_quiz"
+        android:id="@+id/Textview_ox_quiz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="top"
@@ -25,7 +25,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1">
-
+    <!-->여기에 도착&컨트롤러<-->
     </RelativeLayout>
 
 </LinearLayout>

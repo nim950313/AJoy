@@ -9,6 +9,7 @@
     android:orientation="horizontal"
     >
     <FrameLayout
+        android:id="@+id/lay_frame"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <LinearLayout
@@ -19,9 +20,6 @@
                 android:layout_weight="3"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
-
-
-
 
                 <TextView
                     android:id="@+id/textview_content"
@@ -35,7 +33,7 @@
                     android:layout_height="0dp"
                     android:layout_weight="6"
                     android:scaleType="fitCenter"
-                    android:id="@+id/img_answerflag"
+                    android:id="@+id/img_ox_answer"
                     android:src="@drawable/washington"
                     />
 
@@ -52,13 +50,36 @@
                 android:layout_height="match_parent"
                 android:layout_weight="2" />
         </LinearLayout>
+
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/check_albert1"
             >
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="10dp"
+            >
 
+            <Button
+                android:id="@+id/button_go_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClick"
+                android:layout_marginRight="20dp"
+                android:text="처음으로" />
 
+            <Button
+                android:id="@+id/button_go_travel_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClick"
+                android:layout_marginRight="20dp"
+                android:text="한번더하기" />
         </LinearLayout>
     </FrameLayout>
 

@@ -47,7 +47,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1">
-
+        <!-->여기에 도착&컨트롤러<-->
     </RelativeLayout>
 
 </LinearLayout>
