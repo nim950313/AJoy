@@ -21,10 +21,6 @@ import java.util.Random;
 
 import kr.robomation.physical.UoAlbert;
 
-import static project.sk.robocode3.robot_project.CommonObject.capital_button;
-import static project.sk.robocode3.robot_project.CommonObject.nation_capital;
-import static project.sk.robocode3.robot_project.CommonObject.nation_flag;
-import static project.sk.robocode3.robot_project.CommonObject.nation_name;
 import static project.sk.robocode3.robot_project.CommonObject.robot;
 
 public class QuizActivity extends RobotActivity implements View.OnClickListener {
@@ -61,12 +57,12 @@ public class QuizActivity extends RobotActivity implements View.OnClickListener 
         button_answer1 = (ImageButton)findViewById(R.id.button_answer1);
         button_answer2 = (ImageButton)findViewById(R.id.button_answer2);
 
-        Textview_quiz.setText(""+nation_name[index]+"의 수도는?");
+        Textview_quiz.setText(""+CommonObject.nation[index].name+"의 수도는?");
 
         popupView_correct = getLayoutInflater().inflate(R.layout.popup_quiz_finish, null);
         popupWindow_correct = new PopupWindow(popupView_correct, RelativeLayout.LayoutParams.MATCH_PARENT,RelativeLayout.LayoutParams.MATCH_PARENT,true);
         textview_content = (TextView) popupView_correct.findViewById(R.id.textview_content);
-        textview_content.setText("정답입니다! "+nation_name[index]+"의 수도는 "+nation_capital[index]+"입니다!");
+        textview_content.setText("정답입니다! "+CommonObject.nation[index].name+"의 수도는 "+CommonObject.nation[index].capital+"입니다!");
         button_go_home = (Button)popupView_correct.findViewById(R.id.button_go_home);
         answer_flag = (ImageView)findViewById(R.id.img_answerflag);
 
@@ -76,7 +72,7 @@ public class QuizActivity extends RobotActivity implements View.OnClickListener 
         answer = r.nextInt(2)+1;
         int another_answer;
         while(true){
-            another_answer = r.nextInt(nation_name.length);
+            another_answer = r.nextInt(CommonObject.nationCnt);
             if(another_answer == index)
                 continue;
             else
@@ -84,12 +80,12 @@ public class QuizActivity extends RobotActivity implements View.OnClickListener 
         }
 
         if(answer == 1){
-            button_answer1.setBackgroundResource(capital_button[index]);
-            button_answer2.setBackgroundResource(capital_button[another_answer]);
+            button_answer1.setBackgroundResource(CommonObject.nation[index].capitalImage);
+            button_answer2.setBackgroundResource(CommonObject.nation[another_answer].capitalImage);
 
         }else{
-            button_answer2.setBackgroundResource(capital_button[index]);
-            button_answer1.setBackgroundResource(capital_button[another_answer]);
+            button_answer2.setBackgroundResource(CommonObject.nation[index].capitalImage);
+            button_answer1.setBackgroundResource(CommonObject.nation[another_answer].capitalImage);
         }
         //answer_flag.setImageResource(capital_button[index]);
 

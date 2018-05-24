@@ -9,8 +9,6 @@ import org.roboid.robot.Robot;
 
 import java.util.Random;
 
-import static project.sk.robocode3.robot_project.CommonObject.nation_name;
-
 public class StartActivity extends RobotActivity implements View.OnClickListener {
 
     @Override
@@ -24,15 +22,22 @@ public class StartActivity extends RobotActivity implements View.OnClickListener
     @Override
     public void onClick(View v) {
         Intent intent;
+        Random r = new Random();
         switch (v.getId()){
             case R.id.button_choose_nation :
-                intent = new Intent(getApplicationContext(), SelectActivity.class);
+                int tempidx = r.nextInt(3);
+                if(tempidx == 0)
+                    intent = new Intent(getApplicationContext(), StackStartActivity1.class);
+                else if(tempidx == 1)
+                    intent = new Intent(getApplicationContext(), StackStartActivity2.class);
+                else
+                    intent = new Intent(getApplicationContext(), StackStartActivity3.class);
+
                 startActivity(intent);
                 break;
             case R.id.button_start_travel :
                 intent = new Intent(getApplicationContext(), TravelStartActivity.class);
-                Random r = new Random();
-                int index = r.nextInt(nation_name.length);
+                int index = r.nextInt(CommonObject.nationCnt);
                 intent.putExtra("index",index);
                 startActivity(intent);
                 break;

@@ -1,9 +1,6 @@
 package project.sk.robocode3.robot_project;
 
 public class Quiz {
-    //public static  final int capitalNum=4;
-
-    //{"한국","일본","중국","미국"};
 
     public static String[][] capital;
     public static String[][] clothes;
@@ -22,8 +19,6 @@ public class Quiz {
 
         food[0] = new String[]{};
         food[1] = new String[]{};
-
-
 
 
     }

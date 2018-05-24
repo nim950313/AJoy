@@ -5,6 +5,7 @@
     android:background="@color/transparent_gray"
     android:layout_height="match_parent"
     android:gravity="center">
+
 <LinearLayout
     android:background="#eeeeee"
     android:orientation="vertical"

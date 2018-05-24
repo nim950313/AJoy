@@ -35,7 +35,7 @@ public class SelectActivity extends AppCompatActivity  {
         //애니메이션 속도
         circleAnimIndicator.setAnimDuration(300);
         //indecator 생성
-        circleAnimIndicator.createDotPanel(CommonObject.nation_name.length, R.drawable.indicator_non , R.drawable.indicator_on);
+        circleAnimIndicator.createDotPanel(CommonObject.nationCnt, R.drawable.indicator_non , R.drawable.indicator_on);
 
     }
     /**
@@ -70,7 +70,7 @@ public class SelectActivity extends AppCompatActivity  {
 
         @Override
         public int getCount() {
-            return CommonObject.nation_name.length;  // 총 5개의 page를 보여줍니다c.
+            return CommonObject.nationCnt;  // 총 5개의 page를 보여줍니다c.
         }
 
     }
@@ -106,7 +106,7 @@ public class SelectActivity extends AppCompatActivity  {
             int[] imageID = new int[]{R.id.nation_flag1,R.id.nation_flag2,R.id.nation_flag3,R.id.nation_flag4,R.id.nation_flag5,R.id.nation_flag6};
             for(int i=0; i<6;i++){
                 flags[i] = (ImageView) rootView.findViewById(imageID[i]);
-                flags[i].setImageResource(CommonObject.nation_flag[mPageNumber]);
+                flags[i].setImageResource(CommonObject.nation[mPageNumber].flagImage);
                 flags[i].setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {

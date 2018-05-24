@@ -1,6 +1,6 @@
 /*
  * This file is auto-generated.  DO NOT MODIFY.
- * Original file: C:\\Users\\Public\\github\\AJoy\\uoalbert\\src\\main\\aidl\\org\\roboid\\android\\ipc\\DataRequestCallback.aidl
+ * Original file: C:\\Users\\minjeong\\AndroidStudioProjects\\AJoy\\uoalbert\\src\\main\\aidl\\org\\roboid\\android\\ipc\\DataRequestCallback.aidl
  */
 package org.roboid.android.ipc;
 /**

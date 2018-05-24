@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.view.Gravity;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -20,8 +19,6 @@ import org.roboid.robot.Robot;
 import kr.robomation.physical.UoAlbert;
 
 import static project.sk.robocode3.robot_project.CommonObject.left_wheel_speed;
-import static project.sk.robocode3.robot_project.CommonObject.nation_flag;
-import static project.sk.robocode3.robot_project.CommonObject.nation_oid;
 import static project.sk.robocode3.robot_project.CommonObject.right_wheel_speed;
 import static project.sk.robocode3.robot_project.CommonObject.robot;
 
@@ -30,7 +27,8 @@ public class TravelStartActivity extends RobotActivity {
 
     private int index;
     private Thread th;
-    private Button button_move_up,button_move_down,button_move_left,button_move_right,button_submit;
+//    private Button button_move_up,button_move_down,button_move_left,button_move_right;
+    private Button button_submit;
     private ImageView imageview_nationflag;
     public int frontOID;
     private View popupView_correct,popupView_incorrect;
@@ -81,16 +79,16 @@ public class TravelStartActivity extends RobotActivity {
         popupView_incorrect = getLayoutInflater().inflate(R.layout.popup_incorrect, null);
         popupWindow_incorrect = new PopupWindow(popupView_incorrect, RelativeLayout.LayoutParams.MATCH_PARENT,RelativeLayout.LayoutParams.MATCH_PARENT,true);
 
-        button_move_up = (Button)findViewById(R.id.button_move_up);
+/*        button_move_up = (Button)findViewById(R.id.button_move_up);
         button_move_down = (Button)findViewById(R.id.button_move_down);
         button_move_left = (Button)findViewById(R.id.button_move_left);
-        button_move_right = (Button)findViewById(R.id.button_move_right);
+        button_move_right = (Button)findViewById(R.id.button_move_right);*/
         button_submit = (Button)findViewById(R.id.button_finish);
         imageview_nationflag = (ImageView)findViewById(R.id.imageview_nationflag);
 
-        imageview_nationflag.setImageResource(nation_flag[index]);
+        imageview_nationflag.setImageResource(CommonObject.nation[index].flagImage);
 
-        button_move_up.setOnTouchListener(new View.OnTouchListener() {
+ /*       button_move_up.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 int action = event.getAction();
@@ -156,12 +154,12 @@ public class TravelStartActivity extends RobotActivity {
                 }
                 return false;
             }
-        });
+        });*/
 
         button_submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(frontOID == nation_oid[index]){
+                if(frontOID == CommonObject.nation[index].oid){
                     popupWindow_correct.showAtLocation(popupView_correct, Gravity.CENTER,0,0);
                     red = 69;
                     green = 121;

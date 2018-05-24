@@ -42,7 +42,13 @@
         <activity
             android:name=".QuizActivity"
             android:screenOrientation="landscape" />
-        <activity android:name=".TempActivity"></activity>
+        <activity android:name=".TempActivity" />
+        <activity android:name=".StackStartActivity1"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".StackStartActivity2"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".StackStartActivity3"
+            android:screenOrientation="landscape"/>
     </application>
 
 </manifest>
